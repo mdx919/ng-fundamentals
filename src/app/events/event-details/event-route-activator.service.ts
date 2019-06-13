@@ -5,6 +5,8 @@ import { ActivatedRouteSnapshot, Router } from '@angular/router';
 
 @Injectable()
 export class EventRouteActivator implements CanActivate {
+    path: ActivatedRouteSnapshot[];
+    route: ActivatedRouteSnapshot;
     constructor(private eventService: EventService, private router: Router) { }
 
     canActivate(route:ActivatedRouteSnapshot) {

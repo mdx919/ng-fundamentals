@@ -1,3 +1,4 @@
+import { AuthService } from './user/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -39,7 +40,8 @@ import {
       provide: 'canDeactivateCreateEvent', 
       useValue: checkDirtyState
     },
-    EventListResolver
+    EventListResolver,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
