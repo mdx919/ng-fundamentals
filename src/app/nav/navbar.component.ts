@@ -12,5 +12,6 @@ import { Component } from '@angular/core';
     `]
 })
 export class NavbarComponent {
-    constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService) { 
+     }
 }
