@@ -19,6 +19,7 @@ import {
   EventService,
   EventDetailsComponent,
   CreateEventComponent,
+  DurationPipe,
 } from './events/index';
 import { CollapsibleWellComponent } from './events/common/collapsible-well.component';
 
@@ -34,6 +35,7 @@ import { CollapsibleWellComponent } from './events/common/collapsible-well.compo
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,

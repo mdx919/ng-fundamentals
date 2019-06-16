@@ -14,6 +14,9 @@ import { IEvent, ISessions } from '../shared';
 export class EventDetailsComponent {
     event:IEvent;
     addMode = false;
+    filterBy: string = 'all';
+    sortBy: string = 'votes';
+
     constructor(private eventService: EventService, private route: ActivatedRoute) { }
 
     ngOnInit() {
