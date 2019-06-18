@@ -1,3 +1,5 @@
+import { VoterService } from './events/event-details/voter.service';
+import { UpvoteComponent } from './events/event-details/upvote.component';
 import { JQ_TOKEN } from './events/common/jQuery.service';
 import { Toastr, TOASTR_TOKEN } from './events/common/toastr.service';
 import { SessionListComponent } from './events/event-details/sessions-list.component';
@@ -21,6 +23,7 @@ import {
   EventDetailsComponent,
   CreateEventComponent,
   DurationPipe,
+  LocationValidator,
 } from './events/index';
 import { CollapsibleWellComponent } from './events/common/collapsible-well.component';
 import { SimpleModalComponent, ModalTriggerComponent } from './events/common';
@@ -42,7 +45,8 @@ let jQuery = window['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
-    ModalTriggerComponent
+    ModalTriggerComponent,
+    UpvoteComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,8 @@ let jQuery = window['$'];
   providers: [
     EventService,
     EventRouteActivator,
+    VoterService,
+    LocationValidator,
     { 
       provide: 'canDeactivateCreateEvent', 
       useValue: checkDirtyState
